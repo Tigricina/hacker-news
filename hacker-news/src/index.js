@@ -2,18 +2,23 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import {NewsItem} from "./NewsItem/NewsItem";
-//import App from './App';
-
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-  <>
-    <NewsItem/>
-    <NewsItem/>
-    <NewsItem/>
+  
+    <NewsItem 
+      title='Первая новость' 
+      url='www.example.com' 
+      username='Пользователь' 
+      date='10.10.11' 
+      score={10}
 
-  </>
+    >text
+    </NewsItem>
+
+
+  
 );
 
 
