@@ -1,6 +1,7 @@
-import { NewsItem } from "./NewsItem/NewsItem"
+import { NewsItem } from "./NewsItem/NewsItem";
+import { useState } from "react";
 
-const news = [
+const initNews = [
   {
     title: 'Первая новость',
     url: 'www.example.com',
@@ -28,8 +29,28 @@ const news = [
 ]
 
 function App() {
+  const [news, setNews] = useState(initNews)
+  //const newsCount = arr[0]
+  //const setNewsCount = arr[1]
+
+  const newNews = {
+    title: 'Четвёртая новость',
+    url: 'www.example.com',
+    username: 'Пользователь 3',
+    date: '17.09.11',
+    score: 500,
+    id: '4'
+  }
+
+  const newCountHandler = () => {
+    setNews((prevState) => [...prevState, newNews])
+    
+  }
+
   return (
     <>
+      <div>Количество новостей: {news.length}</div>
+      <button onClick={newCountHandler}>Добавить новость</button>
       {
         news.map(item => {
           return (
