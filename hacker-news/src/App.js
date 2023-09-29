@@ -28,27 +28,25 @@ const initNews = [
   }
 ]
 
+const newNews = {
+  title: 'Четвёртая новость',
+  url: 'www.example.com',
+  username: 'Пользователь 3',
+  date: '17.09.11',
+  score: 500,
+  id: '4'
+}
+
 function App() {
-  //const [news, setNews] = useState(JSON.parse(window.localStorage.getItem('newsKey')) || initNews)
   const checkStorage = () => JSON.parse(window.localStorage.getItem('newsKey')) || initNews
   const [news, setNews] = useState(checkStorage)
-  
+
   useEffect(() => {
     window.localStorage.setItem('newsKey', JSON.stringify(news))
-  })
-
-  const newNews = {
-    title: 'Четвёртая новость',
-    url: 'www.example.com',
-    username: 'Пользователь 3',
-    date: '17.09.11',
-    score: 500,
-    id: '4'
-  }
+  }, [news])
 
   const newCountHandler = () => {
-    setNews((prevState) => [...prevState, newNews])
-    
+    setNews((prevState) => [...prevState, newNews]) 
   }
 
   return (
