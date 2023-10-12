@@ -1,49 +1,54 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 20px;
-    height: 90px;
-    border: 1px solid #808080;
-    border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  height: 90px;
+  border: 1px solid #808080;
+  border-radius: 10px;
 }
 
 .link {
-    font-weight: 600;
-    font-size: 16px;
-    color: #1c1c1c;
-    text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  color: #1c1c1c;
+  text-decoration: none;
+}
+
+.externalLink {
+  color: #1200b6;
+  cursor: pobinter;
 }
 
 .info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .userData {
-    font-size: 12px;
-    color: #8f8f8f;
+  font-size: 12px;
+  color: #8f8f8f;
 }
 
 .score {
-    padding: 6px 12px;
-    background-color: #8f8f8f;
-    color: white;
-    border-radius:20px;
+  padding: 6px 12px;
+  background-color: #8f8f8f;
+  color: white;
+  border-radius: 20px;
 }
 
 .lowScore {
-    background-color: #8f8f8f;
-    color: white;
+  background-color: #8f8f8f;
+  color: white;
 }
 
 .midScore {
-    background-color: #ffc377;
-    color: #ff8d00;
+  background-color: #ffc377;
+  color: #ff8d00;
 }
 
 .highScore {
-    background-color: #d9ff89;
-    color: #8bbb0b;
+  background-color: #d9ff89;
+  color: #8bbb0b;
 }

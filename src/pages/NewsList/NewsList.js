@@ -1,7 +1,7 @@
 import { NewsItem } from "../../components/NewsItem/NewsItem";
 import { useEffect, useState } from "react";
 import { get } from "../../api/api";
-import styles from './NewsList.module.css'
+import styles from "./NewsList.module.css";
 
 export function NewsList() {
   const [news, setNews] = useState([]);
@@ -33,7 +33,7 @@ export function NewsList() {
           <NewsItem
             className={styles.newsItem}
             title={item.title}
-            url={item.url}
+            //url={item.url}
             username={item.username}
             date={item.date}
             score={item.score}
